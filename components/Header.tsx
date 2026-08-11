@@ -1,0 +1,3 @@
+import Link from "next/link";
+import Image from "next/image";
+export function Header() { return <header className="sticky top-0 z-40 border-b border-pink-200/20 bg-ink/90 backdrop-blur"><div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3"><Link href="/" aria-label="Ojas International home"><Image src="/ojas-international-logo-final.png" alt="Ojas International" width={270} height={108} className="h-16 w-auto object-contain" priority /></Link><a href="tel:9801989840" className="hidden text-sm font-bold text-pink-100 md:block">Call: 9801989840</a><a href="#order" className="rounded-full bg-yellow-400 px-4 py-2 text-sm font-bold text-black">Order now</a></div></header> }

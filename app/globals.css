@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { @apply bg-cream text-black antialiased; background:#fffafd; }
+* { box-sizing: border-box; }
+::selection { background:#ffad7d; color:#120810; }
+.bg-white { background-color:#fff; color:#160c12; }
+.bg-ink { background-color:#fff !important; color:#160c12 !important; border-color:rgba(255,173,125,.35); }
+.bg-ink * { color:#160c12; }
+.bg-ink .text-yellow-400, .bg-ink .text-yellow-500 { color:#c66b3d !important; }
+.bg-ink .text-pink-100 { color:#8c4c2d !important; }
+.bg-ink .border-white\/15, .bg-ink .border-white\/30 { border-color:rgba(22,12,18,.14) !important; }
+.bg-ink .bg-white\/10, .bg-ink .bg-pink-100\/10 { background-color:#fff0e7 !important; }
+.bg-yellow-400 { background-color:#ffad7d; }
+.bg-yellow-300 { background-color:#ffc7a8; }
+.bg-yellow-100 { background-color:#ffeadf; }
+.text-yellow-400, .text-yellow-500 { color:#d97947; }
+.shadow-yellow-400\/30 { --tw-shadow-color: rgba(255,173,125,.3); }
+.border-pink-200, .border-pink-200\/20, .border-pink-200\/25, .border-pink-200\/50 { border-color:#f6bd9e !important; }
+.bg-pink-100\/10 { background-color:rgba(255,224,208,.45) !important; }
+.bg-pink-300\/20 { background-color:rgba(255,173,125,.2) !important; }
+.shadow-pink-400\/10, .shadow-pink-300\/20 { --tw-shadow-color:rgba(255,173,125,.22) !important; }
+.text-white, .text-white\/50, .text-white\/65, .text-white\/70, .text-white\/75 { color:#160c12 !important; }
