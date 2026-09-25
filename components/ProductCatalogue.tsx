@@ -25,7 +25,7 @@ export function ProductCatalogue() {
                   <p className="text-xs font-bold uppercase tracking-wider text-gold">{product.category}</p>
                   <h4 className="mt-3 text-lg font-black leading-snug">{product.name}</h4>
                   <p className="mt-2 text-sm text-black/55">Model: {product.model}</p>
-                  <div className="mt-auto flex items-end justify-between gap-3 pt-5"><div><strong className="text-xl">{formatNpr(product.price)}</strong><p className="mt-1 text-xs text-black/50">DPP {formatNpr(product.dpp)} + Rs. 500</p></div><Link href={`/checkout?product=${encodeURIComponent(product.name)}&quantity=1&price=${product.price}`} className="rounded-full bg-[#ffb38d] px-4 py-2 text-sm font-bold text-black transition hover:bg-[#ff9d70]">Order</Link></div>
+                  <div className="mt-auto flex items-end justify-between gap-3 pt-5"><strong className="text-xl">{formatNpr(product.price)}</strong><Link href={`/checkout?product=${encodeURIComponent(product.name)}&quantity=1&price=${product.price}`} className="rounded-full bg-[#ffb38d] px-4 py-2 text-sm font-bold text-black transition hover:bg-[#ff9d70]">Order</Link></div>
                 </article>)}
               </div>
             </div>;
