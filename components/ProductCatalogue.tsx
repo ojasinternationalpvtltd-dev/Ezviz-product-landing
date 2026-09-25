@@ -18,14 +18,14 @@ export function ProductCatalogue() {
           {categories.map((category) => {
             const products = catalogProducts.filter((product) => product.category === category);
             return <div key={category}>
-              <div className="mb-4 flex items-center justify-between gap-4"><h3 className="text-2xl font-black">{category}</h3><span className="rounded-full bg-[#ffeadf] px-3 py-1 text-sm font-bold">{products.length} products</span></div>
+              <div className="mb-4 flex items-center justify-between gap-4"><h3 className="text-2xl font-black">{category}</h3><span className="rounded-full bg-[#fff3c4] px-3 py-1 text-sm font-bold">{products.length} products</span></div>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {products.map((product) => <article key={`${product.name}-${product.price}`} className="flex min-h-60 flex-col rounded-2xl border border-black/10 bg-cream p-5 shadow-sm">
                   <div className="relative mb-4 h-32 overflow-hidden rounded-xl bg-white"><Image src={product.image} alt={product.name} fill className="object-contain p-3" sizes="(max-width: 768px) 50vw, 20vw" /></div>
                   <p className="text-xs font-bold uppercase tracking-wider text-gold">{product.category}</p>
                   <h4 className="mt-3 text-lg font-black leading-snug">{product.name}</h4>
                   <p className="mt-2 text-sm text-black/55">Model: {product.model}</p>
-                  <div className="mt-auto flex items-end justify-between gap-3 pt-5"><strong className="text-xl">{formatNpr(product.price)}</strong><Link href={`/checkout?product=${encodeURIComponent(product.name)}&quantity=1&price=${product.price}`} className="rounded-full bg-[#ffb38d] px-4 py-2 text-sm font-bold text-black transition hover:bg-[#ff9d70]">Order</Link></div>
+                  <div className="mt-auto flex items-end justify-between gap-3 pt-5"><strong className="text-xl">{formatNpr(product.price)}</strong><Link href={`/checkout?product=${encodeURIComponent(product.name)}&quantity=1&price=${product.price}`} className="rounded-full bg-[#f5b920] px-4 py-2 text-sm font-bold text-black transition hover:bg-[#e3a30c]">Order</Link></div>
                 </article>)}
               </div>
             </div>;
